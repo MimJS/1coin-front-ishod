@@ -1,0 +1,77 @@
+
+.Gradient {
+    background: 
+    linear-gradient(0deg,#232324,rgba(35,35,36,.98),rgba(35,35,36,.94),rgba(35,35,36,.88),rgba(35,35,36,.8),rgba(35,35,36,.71),rgba(35,35,36,.61),rgba(35,35,36,.5),rgba(35,35,36,.39),rgba(35,35,36,.29),rgba(35,35,36,.2),rgba(35,35,36,.12),rgba(35,35,36,.06),rgba(35,35,36,.02),rgba(35,35,36,0)),
+    url(../dop/bg.jpg) !important;
+}
+
+#main .coin_count {
+    margin-bottom:20px;
+    color:white;
+    font-size:20px;
+    display:flex;
+    align-items: center;
+}
+
+#main .coin_count span {
+    margin-right: 5px;
+}
+
+#main .vkuiTitle {
+    color:white;
+}
+
+#main .history .Title {
+    margin-top:10px;
+    text-align:left;
+    display:flex;
+    align-items: center;
+}
+
+#main .history .Title .Icon {
+    margin-right:10px;
+}
+
+#main .history .list {
+    margin:10px 0px;
+    margin-top:7px;
+}
+
+#main .history .list .SimpleCell {
+    padding:0px;
+}
+
+#main .history .list .SimpleCell:hover,#main .history .list .SimpleCell__description .Icon:hover {
+    cursor: default;
+}
+
+#main .history .list .SimpleCell__children:hover,#main .history .list .SimpleCell__description:hover {
+    cursor:text;
+}
+
+
+#main .history .list .SimpleCell__description {
+    display:flex;
+    align-items: center;
+}
+
+#main .history .list .SimpleCell__description .Icon {
+    margin-left:5px;
+}
+
+#main .history .list .plus .SimpleCell__description {
+    color:#56BE7E;
+}
+
+#main .history .list .minus .SimpleCell__description {
+    color:#EE5E55;
+}
+
+#main .history .list .down {
+    color:var(--gray);
+    font-style:normal;
+    margin-top:10px;
+    display:flex;
+    justify-content: center;
+    font-size:14px;
+}
