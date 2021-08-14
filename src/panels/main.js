@@ -9,6 +9,8 @@ import axios from 'axios'
 import useDebounce from './addon/debounce.js'
 import $ from 'jquery'
 
+const url = 'https://a0e4fcd88b57.ngrok.io'
+
 const Main = p => {
 
     const [data, setdata] = useState({
@@ -156,7 +158,7 @@ const Main = p => {
         }
         setisf(true)
         if(data.signvalid == false){
-            axios.get(`https://a0e4fcd88b57.ngrok.io/api/checkSign${window.location.search}`, {}).then((r) => {
+            axios.get(url + `/api/checkSign${window.location.search}`, {}).then((r) => {
             if (r.data.sign_valid) {
                 setdata({...data, signvalid:true})
             } else {
@@ -172,10 +174,10 @@ const Main = p => {
                     setmodal(`error`)
         })
         } else {
-                 axios.get(`https://a0e4fcd88b57.ngrok.io/api/getUser${window.location.search}&search_user_id=${data.vk.id}`, {}).then((r) => {
+                 axios.get(url + `/api/getUser${window.location.search}&search_user_id=${data.vk.id}`, {}).then((r) => {
                     setisf(false)
                     if(r.data.error){
-                        axios.get(`https://a0e4fcd88b57.ngrok.io/api/getErrors?error_id=${r.data.error_code}`, {}).then((r) => {
+                        axios.get(url + `/api/getErrors?error_id=${r.data.error_code}`, {}).then((r) => {
                                         
                             window.localStorage[`error`] = r.data.response
                             if(d == 1){
@@ -290,14 +292,14 @@ description={
 
                         setpop(<ScreenSpinner/>)
                         
-                        axios.post(`https://a0e4fcd88b57.ngrok.io/api/sendTransfer`, {
+                        axios.post(url + `/api/sendTransfer`, {
                             body:{
                                 'key':e,
                                 'key_length':e.length
                             }
                         }).then((r) => {
                             if(r.data.error){
-                                axios.get(`https://a0e4fcd88b57.ngrok.io/api/getErrors?error_id=${r.data.error_code}`, {}).then((r) => {
+                                axios.get(url + `/api/getErrors?error_id=${r.data.error_code}`, {}).then((r) => {
                                         
                                     setpop( <Alert
                                         actions={[{
