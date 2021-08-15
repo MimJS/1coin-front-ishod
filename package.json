@@ -1,0 +1,61 @@
+{
+  "name": "wcg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env PORT=10888 HTTPS=true react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "vk-miniapps-deploy",
+    "local": "cross-env PORT=10888 HTTPS=true react-scripts start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "react-hot-loader": "^4.9.0",
+    "react-scripts": "^4.0.3"
+  },
+  "dependencies": {
+    "@vkontakte/icons": "^1.118.0",
+    "@vkontakte/vk-bridge": "^2.4.6",
+    "@vkontakte/vkjs": "^0.22.1",
+    "@vkontakte/vkui": "^4.1.0",
+    "aes-ecb": "^1.3.15",
+    "aes256": "^1.1.0",
+    "axios": "^0.21.1",
+    "base-64": "^1.0.0",
+    "core-js": "^2.6.12",
+    "cors": "^2.8.5",
+    "fernet": "^0.3.1",
+    "https-proxy-agent": "^5.0.0",
+    "jquery": "^3.6.0",
+    "lightweight-charts": "^3.3.0",
+    "md5": "^2.3.0",
+    "mysql": "^2.18.1",
+    "react": "^17.0.1",
+    "react-device-detect": "^1.17.0",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scroll": "^1.8.1",
+    "recharts": "^2.0.10",
+    "sandwich-stream": "^2.0.2",
+    "socket.io": "^3.1.0",
+    "socket.io-client": "^3.1.0",
+    "url": "^0.11.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
